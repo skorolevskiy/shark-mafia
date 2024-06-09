@@ -23,7 +23,7 @@ export default function Home() {
           href={`https://warpcast.com/~/channel/sharks`}
           style={{ color: 'inherit' }}
         >
-          Shark mafia
+          🦈Shark mafia🦈
         </a>
       </h1>
     </div>

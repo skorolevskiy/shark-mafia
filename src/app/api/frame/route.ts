@@ -68,8 +68,8 @@ enum ResponseType {
 
 function getResponse(type: ResponseType) {
   const IMAGE = {
-    [ResponseType.SUCCESS]: 'status/success.jpg',
-    [ResponseType.RECAST]: 'status/recast.jpg',
+    [ResponseType.SUCCESS]: 'status/success.JPG',
+    [ResponseType.RECAST]: 'status/recast.JPG',
     [ResponseType.ALREADY_MINTED]: 'status/already-minted.png',
     [ResponseType.NO_ADDRESS]: 'status/no-address.png',
     [ResponseType.ERROR]: 'status/error.png',
@@ -83,8 +83,18 @@ function getResponse(type: ResponseType) {
     <meta property="fc:frame:post_url" content="${SITE_URL}/api/frame" />
     ${
       shouldRetry
-        ? `<meta property="fc:frame:button:1" content="Try again" />`
-        : ''
+        ? `
+          <meta property="fc:frame:button:1" content="Try again" />
+          <meta name="fc:frame:button:2" content="Follow Shark" />
+          <meta name="fc:frame:button:2:action" content="link" />
+          <meta name="fc:frame:button:2:target" content="https://warpcast.com/~/channel/sharks" />
+        `
+        : `
+          <meta name="fc:frame:button:1" content="🔁Referral" />
+          <meta name="fc:frame:button:1:action" content="link" />
+          <meta name="fc:frame:button:1:target" content="https://warpcast.com/~/compose?text=Join&embeds[]=${SITE_URL}/" />
+
+        `
     }
   </head></html>`);
 }

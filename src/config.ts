@@ -6,6 +6,6 @@ export const FRAME_METADATA = getFrameMetadata({
   buttons: [{
 		label: 'Join to Waitlist',
 	},],
-  image: `${SITE_URL}/opengraph-image.jpg`,
+  image: `${SITE_URL}/opengraph-image.JPG`,
   post_url: `${SITE_URL}/api/frame`,
 });
