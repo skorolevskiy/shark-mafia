@@ -23,13 +23,13 @@ export async function POST(req: NextRequest): Promise<Response> {
     }
 
     // Check if user has liked and recasted
-    // const hasLikedAndRecasted =
-    //   !!status?.action?.cast?.viewer_context?.liked &&
-    //   !!status?.action?.cast?.viewer_context?.recasted;
+    const hasLikedAndRecasted =
+      !!status?.action?.cast?.viewer_context?.liked &&
+      !!status?.action?.cast?.viewer_context?.recasted;
 
-    // if (!hasLikedAndRecasted) {
-    //   return getResponse(ResponseType.RECAST);
-    // }
+    if (!hasLikedAndRecasted) {
+      return getResponse(ResponseType.RECAST);
+    }
 
     // Check if user has an address connected
     const address: Address | undefined =
@@ -90,7 +90,7 @@ function getResponse(type: ResponseType) {
           <meta name="fc:frame:button:2:target" content="https://warpcast.com/~/channel/sharks" />
         `
         : `
-          <meta name="fc:frame:button:1" content="🔁Referral" />
+          <meta name="fc:frame:button:1" content="Share Shark Mafia" />
           <meta name="fc:frame:button:1:action" content="link" />
           <meta name="fc:frame:button:1:target" content="https://warpcast.com/~/compose?text=Join&embeds[]=${SITE_URL}/" />
 
