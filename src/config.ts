@@ -5,7 +5,7 @@ export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
 export const NEYNAR_API_KEY = process.env.NEYNAR_API_KEY;
 
 const imageData: FrameImageMetadata = {
-	src: `${SITE_URL}/opengraph-image.jpg`,
+	src: `${SITE_URL}/opengraph-image.png`,
 	aspectRatio: '1:1' // или '1.91:1'
 };
 
