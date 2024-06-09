@@ -52,7 +52,7 @@ export async function addUser(fid: string | null, username: string | null, walle
 			fid: fid ? fid : null,
 			username: username ? username : null,
             wallet: wallet,
-            powerBadge: power_badge
+            powerBadge: power_badge ? power_badge : false
 		})
 		.executeTakeFirst()
 }

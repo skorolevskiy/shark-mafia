@@ -75,7 +75,7 @@ function getResponse(type: ResponseType) {
     [ResponseType.ERROR]: 'status/error.png',
   }[type];
   const shouldRetry =
-    type === ResponseType.ERROR || type === ResponseType.RECAST;
+    type === ResponseType.ERROR || type === ResponseType.RECAST || type === ResponseType.NO_ADDRESS;
   return new NextResponse(`<!DOCTYPE html><html><head>
     <meta property="fc:frame" content="vNext" />
     <meta property="fc:frame:image" content="${SITE_URL}/${IMAGE}" />
