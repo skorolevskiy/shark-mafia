@@ -32,12 +32,12 @@ export async function POST(req: NextRequest): Promise<Response> {
     }
 
     // Check if user has an address connected
-    const address: Address | undefined =
+    const address: Address | null =
       status?.action?.interactor?.verifications?.[0];
 
-    if (!address) {
-      return getResponse(ResponseType.NO_ADDRESS);
-    }
+    // if (!address) {
+    //   return getResponse(ResponseType.NO_ADDRESS);
+    // }
 
     const fid = status?.action?.interactor?.fid ? JSON.stringify(status.action.interactor.fid) : null;
     const username = status?.action?.interactor?.username ? JSON.stringify(status.action.interactor.username) : null;
