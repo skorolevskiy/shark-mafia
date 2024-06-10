@@ -92,7 +92,7 @@ function getResponse(type: ResponseType) {
         : `
           <meta name="fc:frame:button:1" content="Share Shark Mafia" />
           <meta name="fc:frame:button:1:action" content="link" />
-          <meta name="fc:frame:button:1:target" content="https://warpcast.com/~/compose?text=Join&embeds[]=${SITE_URL}/" />
+          <meta name="fc:frame:button:1:target" content="https://warpcast.com/~/compose?text=I%20just%20joined%20the%20Shark%20Mafia%20%F0%9F%A6%88%0A%0AFollow%20%2Fsharks%20and%20become%20part%20of%20the%20%0A%24HARK%24&embeds[]=${SITE_URL}/" />
 
         `
     }
