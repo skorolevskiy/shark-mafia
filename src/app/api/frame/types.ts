@@ -56,3 +56,12 @@ export async function addUser(fid: string | null, username: string | null, walle
 		})
 		.executeTakeFirst()
 }
+
+export async function getAllUsers() {
+	let data: any;
+	data = await db
+			.selectFrom('sharks')
+			.selectAll()
+			.execute();
+	return data;
+}
